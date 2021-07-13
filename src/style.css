@@ -1,0 +1,432 @@
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    color:black;
+    text-decoration:none;
+}
+
+
+body { 
+    margin: 0; 
+    padding: 0; 
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    align-items: flex-start;
+    padding: 50px 15px;
+    width: 250px;
+    height: 100%;
+    background:white;
+    color: black;
+}
+
+.nav-title {
+    margin-bottom: 150px;
+    text-align: center;
+    font-size: 25px;
+    font-weight:bold;
+}
+
+.nav-title:after{
+    left:235px;
+    top:5.5%;
+    content: "";
+    background: rgb(235, 216, 181);
+    width: 40px;
+    height: 40px;
+    border-radius: 999em;
+    z-index: 2;
+    display: block;
+    position: absolute;
+}
+
+.nav-title:before{
+    left:230px;
+    top:5%;
+    content: "";
+    background: rgba(209, 124, 38, 0.671);
+    width: 50px;
+    height: 50px;
+    border-radius: 999em;
+    display: block;
+    z-index: 1;
+    position: absolute;
+}
+
+
+.nav-link {
+    display: block;
+    text-align: center;
+    margin: 30px 0;
+    position: relative;
+}
+
+.nav-link:hover:after {
+    display: block;
+}
+
+.nav-link:hover{
+    color:rgba(133, 50, 18, 0.671);
+}
+
+.nav-link:after {
+    left: 54px;
+    bottom: -10px;
+    content: "";
+    background: rgba(133, 50, 18, 0.671);
+    width: 50%;
+    height: 4px;
+    display: none;
+    position: absolute;
+}
+
+.navbar-toggler {
+    display: none;
+}
+
+.header{
+    height: 70vh;
+    display: flex;
+    width: 87%;
+    justify-content: center;
+    background-image: url("https://i.imgur.com/KfUmCKk.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-position: 100px 100% ;
+    border-radius: 0px;
+    margin-left: 250px;
+    position: relative;
+    margin-top: 0;
+}
+
+.header:after {
+    content: "";
+    background: rgb(0, 0, 0);
+    opacity: .3;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 2;
+    transition: all .3s ease;
+}
+
+.container {
+    position: absolute;
+    right: 20%;
+    bottom: 10%;
+    z-index: 3;
+    color: blanchedalmond;
+}
+
+.section{
+    background-color: rgb(235, 216, 181);
+    width:87%;
+    height: 30vh;
+    display: flex;
+    position: relative;
+    margin-left: 250px;
+    padding-left: 50px;
+}
+
+.text-area {
+    padding: 0px 0px;
+    display: flex;
+    margin-right: 0;
+    width: 70%;
+}
+
+.text-title {
+    width: 5%;
+    word-wrap: break-word;
+    margin-right: 40px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.text-title h3{
+    font-size: 35px;
+}
+
+.text-title:after{
+    left: 98%;
+    bottom:34%;
+    content: "";
+    background: rgb(235, 216, 181);
+    width: 10px;
+    height: 10px;
+    border-radius: 999em;
+    z-index: 2;
+    display: block;
+    position: absolute;
+}
+
+.text-title:before{
+    left: 80%;
+    bottom: 32%;
+    content: "";
+    background: rgba(209, 124, 38, 0.671);
+    width: 20px;
+    height: 20px;
+    border-radius: 999em;
+    display: block;
+    z-index: 1;
+    position: absolute;
+}
+
+.text-p {
+    width: 70%;
+    word-wrap: break-word;
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+}
+
+/* 手機板 */
+
+@media (max-width: 600px) {
+    .navbar {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 5;
+        width: 100%;
+        height: 10vh;
+        background:rgb(255, 255, 255);
+        color: black;
+        padding: 0px 0px;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+    }
+
+    .navbar-list {
+        position: fixed;
+        top: -300px;
+        left: 0;
+        width: 100%;
+        height:250px;
+        background: rgb(255, 255, 255);
+        transition: all 2s ease-out;
+        z-index: 3;
+        display: none;
+    }
+
+    .navbar-list.active {
+        top: 10vh;
+        display: block;
+    }
+
+    .nav-link {
+        display: block;
+        position: relative;
+    }
+
+    .nav-title {
+        margin-bottom: 0px;
+        font-size: 25px;
+        font-weight:bold;
+        flex-grow: 0.8;
+        margin-right: 30px;
+        position: relative;
+    }
+
+    .nav-title:after{
+        left:355px;
+        top:17%;
+        content: "";
+        background: rgb(235, 216, 181);
+        width: 30px;
+        height: 30px;
+        border-radius: 999em;
+        z-index: 2;
+        display: block;
+        position: absolute;
+    }
+    
+    .nav-title:before{
+        left:350px;
+        top:1%;
+        content: "";
+        background: rgba(209, 124, 38, 0.671);
+        width: 40px;
+        height: 40px;
+        border-radius: 999em;
+        display: block;
+        z-index: 1;
+        position: absolute;
+    }
+    
+
+
+    .nav-link:after {
+        left: 40%;
+        bottom: -10px;
+        content: "";
+        background: rgba(133, 50, 18, 0.671);
+        width: 20%;
+        height: 4px;
+        display: none;
+        position: absolute;
+    }
+
+    /*漢堡線  */
+    .navbar-toggler {
+        border: none;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: transparent;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .line {
+        width: 25px;
+        height: 2px;
+        background: rgb(0, 0, 0);
+        position: relative;
+    }
+
+    .line.rotate {
+        transform: rotateZ(45deg);
+    }
+
+    .line.rotate:before {
+        top: 0;
+    }
+
+    .line.rotate:after {
+        transform: rotateZ(270deg);
+        bottom: 0px;
+    }
+
+    .line,
+    .line:before,
+    .line:after {
+        transition: all .3s ease-out;
+    }
+
+    .line:before,
+    .line:after {
+        content: "";
+        width: 25px;
+        height: 2px;
+        background: rgb(0, 0, 0);
+        display: block;
+        position: absolute;
+    }
+
+    .line:before {
+        top: -8px;
+    }
+
+    .line:after {
+        bottom: -8px;
+    }
+
+    /* header區塊 */
+    .header{
+        height: 40vh;
+        width: 100%;
+        background-image: url("https://i.imgur.com/KfUmCKk.jpg");
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+        margin-left: 0;
+        margin-top:90.39px;
+        transition: all .5s ease-out;
+        background-repeat:no-repeat;
+        background-position: -500px -150px ;
+    }
+
+    .header.active {
+        margin-top:390.39px;
+        background-position: -500px 150px ;
+    }
+
+    .container {
+        position: absolute;
+        width: 400px;
+        right: 20px;
+        bottom: 10%;
+        color: blanchedalmond;
+    }
+    
+    /* section 文字區塊 */
+
+    .section{
+        background-color: rgb(235, 216, 181);
+        width:100%;
+        height: 65vh;
+        display: flex;
+        position: relative;
+        margin-left: 0px;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 0px;
+    }
+    
+    .text-area {
+        padding: 0px 0px;
+        margin-left: 35px;
+        text-align: justify;
+    }
+    
+    .text-title {
+        width: 5%;
+        word-wrap: break-word;
+        margin-right: 40px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+    
+    .text-title h3{
+        font-size: 35px;
+    }
+    
+    .text-title:after{
+        left: 30px;
+        bottom:24%;
+        content: "";
+        background: rgb(235, 216, 181);
+        width: 10px;
+        height: 10px;
+        border-radius: 999em;
+        z-index: 2;
+        display: block;
+        position: absolute;
+    }
+    
+    .text-title:before{
+        left: 25px;
+        bottom: 22%;
+        content: "";
+        background: rgba(209, 124, 38, 0.671);
+        width: 20px;
+        height: 20px;
+        border-radius: 999em;
+        display: block;
+        z-index: 1;
+        position: absolute;
+    }
+    
+    .text-p {
+        width: 70%;
+        word-wrap: break-word;
+        margin-left: 0px;
+        display: flex;
+        align-items: center;
+    }
+}
